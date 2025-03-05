@@ -193,9 +193,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0,
+        "r": 0.3297436535358429,
+        "g": 0.6342478394508362,
+        "b": 0.7358490228652954,
         "a": 1.0
     },
     "isMainColor": true,
@@ -890,7 +890,7 @@
     "m_FunctionName": "GridMain",
     "m_FunctionSource": "",
     "m_FunctionSourceUsePragmas": true,
-    "m_FunctionBody": "float2 bd = abs(Pos) * 4 * float2(9.0 / 16, 1);\nfloat2 gr = frac(UV * 10 + 0.125);\nfloat anim = sin(length(Pos) * 3 - _Time.y * 2);\n\nOutput = all(bd < 1) * all(gr < 0.25) * (anim + 1.2) / 2.2;"
+    "m_FunctionBody": "float2 bd = abs(Pos) * 4 * float2(9.0 / 16, 1);\nfloat2 gr = frac(UV * 10 + 0.125);\nfloat anim = frac(length(Pos) * 0.75 - _Time.y * 0.3);\n\nOutput = all(bd < 1) * all(gr < 0.25) * anim;\n"
 }
 
 {

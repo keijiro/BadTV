@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 4d9968eb1dfdd3941af9213d6b6766ef, type: 3}
-  _shape: 1
+  _shape: 4
   _line:
     From: {x: 0, y: 0, z: 0}
     To: {x: 0, y: 0, z: 1}
@@ -23,7 +23,7 @@ ScriptedImporter:
   _box:
     Size: {x: 1, y: 1, z: 1}
   _ticks:
-    Count: 32
+    Count: 4
   _grid:
     Size: {x: 1, y: 1, z: 1}
     Subdivision: {x: 5, y: 5, z: 5}
