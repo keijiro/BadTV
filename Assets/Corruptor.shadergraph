@@ -281,7 +281,7 @@
     },
     "m_Slots": [
         {
-            "m_Id": "8388773b787f404da701535dd29b4f4a"
+            "m_Id": "5a00a750e6e143b28c623736cdc010e0"
         },
         {
             "m_Id": "7900028d544d4600ba8656823bf10bcd"
@@ -307,11 +307,11 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_SourceType": 0,
+    "m_SourceType": 1,
     "m_FunctionName": "CorruptorMain",
     "m_FunctionSource": "e57a36b5510364f7da5912ce36fe7575",
     "m_FunctionSourceUsePragmas": true,
-    "m_FunctionBody": "Enter function body here..."
+    "m_FunctionBody": "float2 p = (UV - 0.5) * 2;\nfloat scale = 1 - Distortion * (2 - dot(p, p));\nUV = p * scale * 0.5 + 0.5;\n\nfloat3 color = LinearToSRGB(tex2D(Source, UV).rgb);\n\ncolor = tex3D(LUT, color).rgb;\n\nOutput = SRGBToLinear(color);\n"
 }
 
 {
@@ -361,6 +361,24 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
+    "m_ObjectId": "5a00a750e6e143b28c623736cdc010e0",
+    "m_Id": 0,
+    "m_DisplayName": "Source",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Source",
+    "m_StageCapability": 3,
+    "m_BareResource": false,
+    "m_Texture": {
+        "m_SerializedTexture": "",
+        "m_Guid": ""
+    },
+    "m_DefaultType": 0
 }
 
 {
@@ -461,24 +479,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
-    "m_ObjectId": "8388773b787f404da701535dd29b4f4a",
-    "m_Id": 0,
-    "m_DisplayName": "SourceTex",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "SourceTex",
-    "m_StageCapability": 3,
-    "m_BareResource": false,
-    "m_Texture": {
-        "m_SerializedTexture": "",
-        "m_Guid": ""
-    },
-    "m_DefaultType": 0
 }
 
 {
